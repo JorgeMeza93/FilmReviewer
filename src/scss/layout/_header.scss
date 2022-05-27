@@ -1,0 +1,27 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.header{
+    height: 100vh;
+    &__barra{
+        display: flex;
+        justify-content: space-evenly;
+        background-image: variables.$gradientePrincipal;
+        height: 50vh;
+    }
+}
+.social{
+    background-color: white;
+    &__enlace{
+        margin-left: 2rem;
+    }
+}
+.enlaces{
+
+    &__enlace{
+        font-size: 1.9rem;
+        color: variables.$blanco;
+        margin-left: 3rem;
+        
+    }
+}
