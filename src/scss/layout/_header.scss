@@ -2,26 +2,51 @@
 @use "../base/variables";
 
 .header{
+    display: flex;
+    flex-direction: column;
+    background-image:  variables.$gradientePrincipal;
     height: 100vh;
-    &__barra{
-        display: flex;
-        justify-content: space-evenly;
-        background-image: variables.$gradientePrincipal;
+    @include mixins.laptop{
         height: 50vh;
     }
-}
-.social{
-    background-color: white;
-    &__enlace{
-        margin-left: 2rem;
+    &__barra{
+        display: none;
+        @include mixins.laptop{
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__heading{
+        font-family: variables.$fuenteHeader;
+        color: variables.$blanco;
+        font-size: 5.4rem;
+        text-align: center;
+    }
+    &__contenido{
+        
     }
 }
-.enlaces{
 
+.social{
+    display: flex;
     &__enlace{
-        font-size: 1.9rem;
+        cursor: pointer;
+        &-img{
+            width: 2.5rem;
+            margin-right: 3rem;
+        }
+    }
+
+}
+.enlaces{
+    width: 33.3%;
+    display: flex;
+    justify-content: space-between;
+    &__enlace{
+        display: block;
+        font-size: 2.2rem;
         color: variables.$blanco;
-        margin-left: 3rem;
-        
     }
 }
