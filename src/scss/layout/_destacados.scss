@@ -1,0 +1,19 @@
+@use "../base/mixins";
+@use "../base/variables";
+
+.destacados{
+    &__grid{
+        @include mixins.laptop{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.destacado{
+    &__img{
+        width: 30%;
+        margin: 0 auto;
+    }
+
+}

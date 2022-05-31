@@ -8,6 +8,7 @@
     height: 100vh;
     @include mixins.laptop{
         height: 50vh;
+        justify-content: space-between;
     }
     &__barra{
         display: none;
@@ -18,14 +19,24 @@
             justify-content: space-between;
         }
     }
+    &__contenido{
+        height: 25vh;
+    }
     &__heading{
         font-family: variables.$fuenteHeader;
         color: variables.$blanco;
         font-size: 5.4rem;
         text-align: center;
     }
-    &__contenido{
-        
+    &__logotipo{
+        font-family: variables.$fuenteLogo;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        margin: 0 0 0 2rem;
+        span{
+            color: variables.$blanco;
+            font-size: 2.5rem;
+        }
     }
 }
 
